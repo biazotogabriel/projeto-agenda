@@ -1,0 +1,19 @@
+<div class="responsive-table">
+    <% if(contatos) { %>
+    <p class="text-center lead">Seus contatos estão abaixo</p>
+    <table class="table">
+        <% for (contato of contatos) { %>
+        <tr>
+            <td><%= contato.nome %></td>
+            <td><%= contato.sobrenome %></td>
+            <td><%= contato.telefone %></td>
+            <td><%= contato.email %></td>
+            <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+            <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+        </tr>
+        <% } %>
+        <% } else { %>
+        <p class="text-center lead">Sem contatos</p>
+        <% } %>
+    </table>
+</div>

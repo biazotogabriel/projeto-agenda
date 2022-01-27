@@ -1,0 +1,15 @@
+criando chave ssh (permite logar no servidor sem precisar de senhas)
+para isso é preciso gerar uma senha ssh e colocar a chave ssh do arquivo pub no servidor
+caso outra pessoa tenha acesso a chave ssh ele também terá acesso ao servidor
+comandos para criar chave ssh:
+-> ssh-keygen
+
+comando para abrir a pasta da chave:
+-> start ~/.ssh
+
+comandos para adicionar a chave ssh (precisa executar sempre que o servidor é reiniciado):
+-> eval $(ssh-agent) -> retorna agent pid ...
+-> ssh-add ~/.ssh/id_rsa -> adiciona a chave no meu ssh
+
+comando para acessar o servidor:
+-> ssh 34.151.227.242

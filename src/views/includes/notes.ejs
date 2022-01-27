@@ -1,0 +1,17 @@
+<div class="responsive-table">
+    <% if(notes) { %>
+    <p class="text-center lead">Suas notas estão abaixo</p>
+    <table class="table">
+        <% for (note of notes) { %>
+        <tr>
+            <td><%= note.title %></td>
+            <td><%= note.information %></td>
+            <td><a href="/nota/index/<%= note._id %>">Editar</a></td>
+            <td><a class="text-danger" href="/nota/delete/<%= note._id %>">Excluir</a></td>
+        </tr>
+        <% } %>
+        <% } else { %>
+        <p class="text-center lead">Sem notas</p>
+        <% } %>
+    </table>
+</div>
